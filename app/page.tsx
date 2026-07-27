@@ -244,6 +244,7 @@ export default function Home() {
         alt="Logo RSUD Sayang Cianjur"
         width={180}
         height={180}
+        unoptimized
         className="max-h-36 w-auto object-contain"
       />
     </div>
@@ -263,13 +264,14 @@ export default function Home() {
   <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
     <div className="h-40 flex items-center justify-center mb-6">
-      <Image
-        src="/images/rs-pena.png"
-        alt="Logo RS Pena"
-        width={180}
-        height={180}
-        className="max-h-36 w-auto object-contain"
-      />
+          <Image
+      src="/images/rs-pena.png"
+      alt="Logo RS Pena"
+      width={180}
+      height={180}
+      unoptimized
+      className="max-h-36 w-auto object-contain"
+    />
     </div>
 
     <h3 className="text-2xl font-bold mb-3">
