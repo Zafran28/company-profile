@@ -238,6 +238,7 @@ export default function Home() {
   {/* Card 1 */}
   <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
+<<<<<<< HEAD
       <div className="h-40 flex items-center justify-center mb-6">
        <Image
     src="/images/RSUD.png"
@@ -247,6 +248,16 @@ export default function Home() {
     unoptimized
     className="max-h-36 w-auto object-contain"
   />
+=======
+    <div className="h-40 flex items-center justify-center mb-6">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
+      src="/images/RSUD.png"
+      alt="Logo RSUD"
+      width={180}
+      height={180}
+    />
+>>>>>>> 3b1dbf3 (update product images and company profile)
     </div>
 
     <h3 className="text-2xl font-bold mb-3">
@@ -264,6 +275,7 @@ export default function Home() {
   <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
     <div className="h-40 flex items-center justify-center mb-6">
+<<<<<<< HEAD
         <Image
   src="/images/RS-PENA.png"
   alt="Logo RS Pena"
@@ -271,6 +283,14 @@ export default function Home() {
   height={180}
   unoptimized
   className="max-h-36 w-auto object-contain"
+=======
+         <Image
+  src="/images/rs-pena.png"
+  alt="RS Pena"
+  width={180}
+  height={180}
+  unoptimized
+>>>>>>> 3b1dbf3 (update product images and company profile)
 />
     </div>
 
