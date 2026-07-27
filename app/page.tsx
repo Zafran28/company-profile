@@ -329,7 +329,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/rs-sekarwangi.jfif"
+        src="/images/rs-sekarwangi.png"
         alt="Logo Perusahaan"
         width={180}
         height={180}
@@ -351,7 +351,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/rs-muhammadiyah.jfif"
+        src="/images/rs-muhammadiyah.png"
         alt="Logo Perusahaan"
         width={180}
         height={180}
