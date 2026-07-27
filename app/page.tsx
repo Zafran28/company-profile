@@ -240,7 +240,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/rsud.png"
+        src="public/images/RSUD.png"
         alt="Logo RSUD Sayang Cianjur"
         width={180}
         height={180}
@@ -265,7 +265,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
           <Image
-      src="/images/rs-pena.png"
+      src="/images/public/images/RS-PENA.png"
       alt="Logo RS Pena"
       width={180}
       height={180}
