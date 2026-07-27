@@ -206,22 +206,22 @@ export default function Home() {
     </div>
   </div>
 </section>
-
-      {/* Portfolio */}
-     <section id="portfolio" className="py-24 bg-white">
+{/* Portfolio */}
+<section id="portfolio" className="py-24 bg-white">
   <div className="max-w-7xl mx-auto px-8">
+
     <h2 className="text-4xl font-bold text-center mb-4">
-     Partners
+      Partners
     </h2>
 
     <p className="text-center text-gray-600 mb-12">
-      ESP Scan Solutions berkolaborasi dengan berbagai mitra terpercaya untuk menghadirkan solusi terbaik bagi pelanggan.
+      PT Trinovasi Digital Solusi berkolaborasi dengan berbagai mitra
+      terpercaya untuk menghadirkan solusi terbaik bagi pelanggan.
     </p>
 
     <h3 className="text-3xl font-bold text-center text-blue-700 mb-12">
       PT. FOKUS KREASI MEDIA
     </h3>
-
 
 
     <h2 className="text-4xl font-bold text-center mb-4">
@@ -233,210 +233,174 @@ export default function Home() {
       dalam menyediakan solusi identifikasi pasien, barcode, serta perangkat
       pendukung operasional.
     </p>
-<div className="grid md:grid-cols-3 gap-8">
 
-  {/* Card 1 */}
-  <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
-<<<<<<< HEAD
-      <div className="h-40 flex items-center justify-center mb-6">
-       <Image
-    src="/images/RSUD.png"
-    alt="Logo RSUD"
-    width={180}
-    height={180}
-    unoptimized
-    className="max-h-36 w-auto object-contain"
-  />
-=======
-    <div className="h-40 flex items-center justify-center mb-6">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img
-      src="/images/RSUD.png"
-      alt="Logo RSUD"
-      width={180}
-      height={180}
-    />
->>>>>>> 3b1dbf3 (update product images and company profile)
-    </div>
+    <div className="grid md:grid-cols-3 gap-8">
 
-    <h3 className="text-2xl font-bold mb-3">
-      RSUD Sayang Cianjur
-    </h3>
 
-    <p className="text-gray-600">
-      Pengadaan gelang identifikasi pasien, barcode printer,
-      serta label rumah sakit.
-    </p>
+      {/* RSUD */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
-  </div>
-
-  {/* Card 2 */}
-  <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-    <div className="h-40 flex items-center justify-center mb-6">
-<<<<<<< HEAD
-        <Image
-  src="/images/RS-PENA.png"
-  alt="Logo RS Pena"
-  width={180}
-  height={180}
-  unoptimized
-  className="max-h-36 w-auto object-contain"
-=======
-         <Image
-  src="/images/rs-pena.png"
-  alt="RS Pena"
-  width={180}
-  height={180}
-  unoptimized
->>>>>>> 3b1dbf3 (update product images and company profile)
-/>
-    </div>
-
-    <h3 className="text-2xl font-bold mb-3">
-      RS Pena 88
-    </h3>
-    <p className="text-gray-600">
-     Implementasi E-Tiket, printer label, serta solusi pencetakan label identifikasi pasien untuk meningkatkan efisiensi dan akurasi pelayanan.
-    </p>
-    
-
-  </div>
-
-  {/* Card 3 */}
-  <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-    <div className="h-40 flex items-center justify-center mb-6">
-      <Image
-        src="/images/rs-nusantara.png"
-        alt="Logo Perusahaan"
-        width={180}
-        height={180}
-        className="max-h-36 w-auto object-contain"
-      />
-    </div>
-
-    <h3 className="text-2xl font-bold mb-3">
-        RS Nusantara Mustika Jaya
-    </h3>
-
-    <p className="text-gray-600">
-     Implementasi E-Tiket, printer label, serta solusi pencetakan label identifikasi pasien untuk meningkatkan efisiensi dan akurasi pelayanan.
-    </p>
-
-  </div>
-  <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-    <div className="h-40 flex items-center justify-center mb-6">
-      <Image
-        src="/images/rs-bhayangkara-cianjur.png"
-        alt="Logo Perusahaan"
-        width={180}
-        height={180}
-        className="max-h-36 w-auto object-contain"
-      />
-    </div>
-
-    <h3 className="text-2xl font-bold mb-3">
-        RS BHAYANGKARA CIANJUR
-    </h3>
-
-    <p className="text-gray-600">
-      Implementasi gelang identifikasi pasien dan printer wristband untuk mendukung pelayanan kesehatan yang lebih aman dan efisien.
-    </p>
-
-  </div>
-   <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-    <div className="h-40 flex items-center justify-center mb-6">
-      <Image
-        src="/images/rs-sekarwangi.png"
-        alt="Logo Perusahaan"
-        width={180}
-        height={180}
-        className="max-h-36 w-auto object-contain"
-      />
-    </div>
-
-    <h3 className="text-2xl font-bold mb-3">
-        RSUD SEKARWANGI SUKABUMI
-    </h3>
-
-    <p className="text-gray-600">
-      Implementasi kartu identitas pasien beserta sistem pencetakan kartu untuk mendukung proses registrasi, identifikasi, dan pelayanan kesehatan yang lebih cepat, akurat, dan efisien.
-    </p>
-
-  </div>
-
-   <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-    <div className="h-40 flex items-center justify-center mb-6">
-      <Image
-        src="/images/rs-muhammadiyah.png"
-        alt="Logo Perusahaan"
-        width={180}
-        height={180}
-        className="max-h-36 w-auto object-contain"
-      />
-    </div>
-
-    <h3 className="text-2xl font-bold mb-3">
-        RS MUHAMADIYAH Taman Puring
-    </h3>
-
-    <p className="text-gray-600">
-     Implementasi gelang identifikasi pasien dan printer wristband untuk mendukung pelayanan kesehatan yang lebih aman dan efisien.
-    </p>
-
-  </div>
-
-</div>
-
-  </div>
-     </section>
-
-      {/* Contact */}
-      <section
-        id="contact"
-        className="py-24 bg-blue-700 text-white"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-
-          <h2 className="text-4xl font-bold mb-8">
-            Hubungi Kami
-          </h2>
-
-          <p className="mb-3">
-            📍{" "}
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Jl.+Raya+Pasar+Jengkol+Babakan+Setu+Tangerang+Selatan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 underline"
-            >
-              Jl. Raya Pasar Jengkol Babakan Setu Tangerang Selatan
-            </a>
-          </p>
-          <p className="mb-8">
-            ✉ digitaltrinovasisolusi@gmail.com
-          </p>
-
-          <p className="mb-3">
-            📞 +62 852-8608-3882
-          </p>
-
-          <a
-            href="https://wa.me/6285286083882"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-8 bg-white text-blue-700 px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition"
-          >
-            WhatsApp Kami
-          </a>
-
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/RSUD.png"
+            alt="Logo RSUD"
+            width={180}
+            height={180}
+            unoptimized
+            className="max-h-36 w-auto object-contain"
+          />
         </div>
-      </section>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RSUD Sayang Cianjur
+        </h3>
+
+        <p className="text-gray-600">
+          Pengadaan gelang identifikasi pasien, barcode printer,
+          serta label rumah sakit.
+        </p>
+
+      </div>
+
+
+
+      {/* RS Pena */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/RS-PENA.png"
+            alt="Logo RS Pena"
+            width={180}
+            height={180}
+            unoptimized
+            className="max-h-36 w-auto object-contain"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RS Pena 88
+        </h3>
+
+        <p className="text-gray-600">
+          Implementasi E-Tiket, printer label, serta solusi
+          pencetakan label identifikasi pasien.
+        </p>
+
+      </div>
+
+
+
+      {/* Nusantara */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/rs-nusantara.png"
+            alt="RS Nusantara"
+            width={180}
+            height={180}
+            className="max-h-36 w-auto object-contain"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RS Nusantara Mustika Jaya
+        </h3>
+
+        <p className="text-gray-600">
+          Implementasi E-Tiket, printer label, serta solusi
+          pencetakan identifikasi pasien.
+        </p>
+
+      </div>
+
+
+
+      {/* Bhayangkara */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/rs-bhayangkara-cianjur.png"
+            alt="RS Bhayangkara"
+            width={180}
+            height={180}
+            className="max-h-36 w-auto object-contain"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RS Bhayangkara Cianjur
+        </h3>
+
+        <p className="text-gray-600">
+          Implementasi gelang identifikasi pasien dan printer
+          wristband untuk pelayanan kesehatan.
+        </p>
+
+      </div>
+
+
+
+      {/* Sekarwangi */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/rs-sekarwangi.png"
+            alt="RSUD Sekarwangi"
+            width={180}
+            height={180}
+            className="max-h-36 w-auto object-contain"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RSUD Sekarwangi Sukabumi
+        </h3>
+
+        <p className="text-gray-600">
+          Implementasi kartu identitas pasien dan sistem
+          pencetakan kartu rumah sakit.
+        </p>
+
+      </div>
+
+
+
+      {/* Muhammadiyah */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+        <div className="h-40 flex items-center justify-center mb-6">
+          <Image
+            src="/images/rs-muhammadiyah.png"
+            alt="RS Muhammadiyah"
+            width={180}
+            height={180}
+            className="max-h-36 w-auto object-contain"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold mb-3">
+          RS Muhammadiyah Taman Puring
+        </h3>
+
+        <p className="text-gray-600">
+          Implementasi gelang identifikasi pasien dan printer
+          wristband untuk mendukung pelayanan kesehatan.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+     
+   
 
       {/* Footer */}
       <footer className="bg-black text-white py-6 text-center">
