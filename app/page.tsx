@@ -240,7 +240,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/RSUD.png"
+        src="/images/rsud.png"
         alt="Logo RSUD Sayang Cianjur"
         width={180}
         height={180}
@@ -264,7 +264,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/RS-PENA.png"
+        src="/images/rs-pena.png"
         alt="Logo RS Pena"
         width={180}
         height={180}
@@ -287,7 +287,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/RS-Nusantara-Mustika-Jaya.png"
+        src="/images/rs-nusantara.png"
         alt="Logo Perusahaan"
         width={180}
         height={180}
@@ -308,7 +308,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/RS-BAYANGKARA-CIANJUR.png"
+        src="/images/rs-bhayangkara-cianjur.png"
         alt="Logo Perusahaan"
         width={180}
         height={180}
@@ -329,7 +329,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/SEKARWANGI.jfif"
+        src="/images/rs-sekarwangi.jfif"
         alt="Logo Perusahaan"
         width={180}
         height={180}
@@ -351,7 +351,7 @@ export default function Home() {
 
     <div className="h-40 flex items-center justify-center mb-6">
       <Image
-        src="/images/RS MUHAMADIYAH.jfif"
+        src="/images/rs-muhammadiyah.jfif"
         alt="Logo Perusahaan"
         width={180}
         height={180}
