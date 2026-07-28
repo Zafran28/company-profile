@@ -254,7 +254,7 @@ min-h-screen
 flex
 items-center
 justify-center
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-700
 to-cyan-500
 text-white
@@ -669,9 +669,27 @@ py-16
 px-5
 text-center">
 
+{/* CONTACT */}
+
+<section
+id="contact"
+className="
+bg-blue-700
+text-white
+py-16
+px-5
+">
+
+
+<div className="
+max-w-5xl
+mx-auto
+text-center">
+
 
 <h2 className="
 text-3xl
+md:text-4xl
 font-bold
 mb-5">
 
@@ -680,12 +698,162 @@ Hubungi Kami
 </h2>
 
 
-<p>
 
-Siap membantu kebutuhan barcode
-dan identifikasi pasien perusahaan Anda.
+<p className="
+text-base
+md:text-lg
+mb-10">
+
+Siap membantu kebutuhan barcode,
+identifikasi pasien, dan solusi teknologi
+untuk perusahaan Anda.
 
 </p>
+
+
+
+
+<div className="
+grid
+md:grid-cols-3
+gap-6
+text-left">
+
+
+{/* ALAMAT */}
+
+<div className="
+bg-white/10
+rounded-2xl
+p-6">
+
+
+<h3 className="
+text-xl
+font-bold
+mb-3">
+
+📍 Alamat
+
+</h3>
+
+
+<p className="
+leading-7">
+
+PT. Trinovasi Digital Solusi
+<br/>
+
+Jl Raya Pasar Jengkol Babakan Setu Tangerang Selatan Banten 15315
+
+</p>
+
+
+</div>
+
+
+
+
+
+{/* PHONE */}
+
+<div className="
+bg-white/10
+rounded-2xl
+p-6">
+
+
+<h3 className="
+text-xl
+font-bold
+mb-3">
+
+📞 WhatsApp
+
+</h3>
+
+
+<p className="
+leading-7
+mb-5">
+
++62 852-8608-3882
+
+</p>
+
+
+
+<a
+
+href="https://wa.me/6285286083882?text=Halo%20PT%20Trinovasi%20Digital%20Solusi,%20saya%20ingin%20mengetahui%20informasi%20produk"
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+className="
+inline-block
+bg-green-500
+hover:bg-green-600
+px-6
+py-3
+rounded-full
+font-bold
+transition">
+
+Chat WhatsApp
+
+</a>
+
+
+</div>
+
+
+
+
+
+{/* EMAIL */}
+
+<div className="
+bg-white/10
+rounded-2xl
+p-6">
+
+
+<h3 className="
+text-xl
+font-bold
+mb-3">
+
+✉️ Email
+
+</h3>
+
+
+<a
+
+href="mailto:digitalsolusitrinovasi@gmail.com"
+
+className="
+underline
+break-all">
+
+digitalsolusitrinovasi@gmail.com
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
 
 
 </section>
