@@ -1,412 +1,714 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-white text-gray-800">
 
-      {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-          <h1 className="text-2xl font-bold text-blue-600">
-            PT.TRINOVASI DIGITAL SOLUSI
-          </h1>
+const [menu,setMenu]=useState(false);
 
-          <nav className="hidden md:flex gap-8 font-medium">
-            <a href="#home" className="hover:text-blue-600">Home</a>
-            <a href="#about" className="hover:text-blue-600">About</a>
-           <Link href="/software" className="hover:text-blue-600">
-  Software
+
+const products=[
+{
+icon:"🏥",
+title:"Gelang Pasien",
+desc:"Gelang identifikasi pasien dewasa, anak dan bayi untuk mendukung keselamatan pasien."
+},
+{
+icon:"🖨️",
+title:"Barcode Printer",
+desc:"Printer barcode untuk kebutuhan label, wristband dan industri."
+},
+{
+icon:"🏷️",
+title:"Label & Ribbon",
+desc:"Label barcode, thermal ribbon dan media cetak berkualitas tinggi."
+},
+{
+icon:"🔧",
+title:"Instalasi & Support",
+desc:"Instalasi perangkat, konfigurasi sistem dan dukungan teknis."
+}
+];
+
+
+const clients=[
+{
+img:"/images/RSUD.png",
+name:"RSUD Sayang Cianjur",
+desc:"Pengadaan gelang pasien, barcode printer dan label rumah sakit."
+},
+{
+img:"/images/RS-PENA.png",
+name:"RS Pena 88",
+desc:"Implementasi E-Tiket dan pencetakan label."
+},
+{
+img:"/images/rs-nusantara.png",
+name:"RS Nusantara Mustika Jaya",
+desc:"Solusi identifikasi pasien modern."
+},
+{
+img:"/images/rs-bhayangkara-cianjur.png",
+name:"RS Bhayangkara Cianjur",
+desc:"Implementasi gelang pasien dan printer wristband."
+},
+{
+img:"/images/rs-sekarwangi.png",
+name:"RSUD Sekarwangi Sukabumi",
+desc:"Sistem kartu identitas pasien."
+},
+{
+img:"/images/rs-muhammadiyah.png",
+name:"RS Muhammadiyah Taman Puring",
+desc:"Solusi identifikasi pasien rumah sakit."
+}
+];
+
+
+
+return(
+
+<main className="bg-white text-gray-800 scroll-smooth">
+
+
+{/* NAVBAR */}
+
+<header className="
+fixed top-0 left-0 right-0
+bg-white/95 backdrop-blur
+shadow-md
+z-50">
+
+
+<div className="
+max-w-7xl mx-auto
+flex items-center justify-between
+px-4
+py-4">
+
+
+<h1 className="
+text-base
+sm:text-xl
+md:text-2xl
+font-bold
+text-blue-600">
+
+PT.TRINOVASI DIGITAL SOLUSI
+
+</h1>
+
+
+
+{/* DESKTOP */}
+
+<nav className="
+hidden md:flex
+gap-8
+font-medium">
+
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+
+<Link href="/software">
+Software
 </Link>
-            <a href="#services" className="hover:text-blue-600">Services</a>
-            <a href="#portfolio" className="hover:text-blue-600">Portfolio</a>
-            <a href="#contact" className="hover:text-blue-600">Contact</a>
-          </nav>
-        </div>
-      </header>
 
-      {/* Hero */}
-      <section
-        id="home"
-        className="h-screen flex items-center justify-center bg-linear-to-r from-blue-700 to-cyan-500 text-white"
-      >
-        <div className="text-center px-6">
-  <h1 className="text-6xl font-bold mb-6 leading-tight">
-    Solusi Identifikasi Pasien & Barcode Terpercaya
-  </h1>
+<a href="#services">
+Services
+</a>
 
-  <p className="text-xl max-w-4xl mx-auto mb-10 leading-8">
-    PT Trinovasi Digital Solusi menyediakan berbagai solusi identifikasi pasien
-    seperti gelang pasien, kartu pasien, barcode printer, printer kartu,
-    label barcode, thermal ribbon, dan perangkat AIDC untuk mendukung
-    operasional rumah sakit, klinik, laboratorium, serta berbagai sektor industri.
-  </p>
+<a href="#portfolio">
+Portfolio
+</a>
 
-  <div className="flex flex-col sm:flex-row justify-center gap-4">
-    <a
-      href="#contact"
-      className="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition"
-    >
-      Hubungi Kami
-    </a>
+<a href="#contact">
+Contact
+</a>
 
-    <Link
-  href="/produk"
-  className="border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition"
->
-  Lihat Produk
+
+</nav>
+
+
+
+{/* MOBILE BUTTON */}
+
+<button
+
+onClick={()=>setMenu(!menu)}
+
+className="
+md:hidden
+text-3xl
+p-2
+">
+
+☰
+
+</button>
+
+
+</div>
+
+
+
+
+{/* MOBILE MENU */}
+
+{
+menu &&
+
+<div className="
+md:hidden
+bg-white
+shadow-lg
+px-6
+py-6">
+
+
+<nav className="
+flex
+flex-col
+gap-5
+font-semibold">
+
+
+<a 
+onClick={()=>setMenu(false)}
+href="#home">
+
+Home
+
+</a>
+
+
+<a 
+onClick={()=>setMenu(false)}
+href="#about">
+
+About
+
+</a>
+
+
+<Link
+onClick={()=>setMenu(false)}
+href="/software">
+
+Software
+
 </Link>
-  </div>
-</div>
-      </section>
 
-      {/* About */}
-      <section id="about" className="py-24">
-        <div className="max-w-6xl mx-auto px-8">
-          <h2 className="text-4xl font-bold text-center mb-10">
-            Tentang Kami
-          </h2>
 
-          <div className="max-w-5xl mx-auto text-gray-600 leading-8">
+<a 
+onClick={()=>setMenu(false)}
+href="#services">
 
-  <p className="mb-6 text-lg text-center">
-    <strong>PT Trinovasi Digital Solusi</strong> merupakan perusahaan yang bergerak
-    di bidang penyediaan solusi teknologi informasi serta perangkat identifikasi
-    otomatis untuk mendukung transformasi digital di berbagai sektor industri,
-    khususnya rumah sakit, klinik, laboratorium, manufaktur, dan retail.
-  </p>
+Services
 
-  <p className="mb-6 text-lg text-center">
-    Kami menyediakan berbagai produk dan layanan seperti gelang identifikasi pasien,
-    kartu pasien, barcode scanner, barcode printer, printer kartu, label barcode,
-    thermal ribbon, serta berbagai perangkat pendukung lainnya yang dirancang untuk
-    meningkatkan efisiensi, akurasi, dan produktivitas operasional pelanggan.
-  </p>
+</a>
 
-  <p className="mb-10 text-lg text-center">
-    Dengan didukung tenaga profesional dan pengalaman di bidang teknologi,
-    PT Trinovasi Digital Solusi berkomitmen menghadirkan produk berkualitas,
-    layanan terbaik, serta solusi yang inovatif guna membantu pelanggan
-    mencapai kinerja bisnis yang lebih optimal.
-  </p>
 
-  <div className="mt-12">
-    <h3 className="text-3xl font-bold text-blue-700 mb-4 text-center">
-      Visi
-    </h3>
+<a 
+onClick={()=>setMenu(false)}
+href="#portfolio">
 
-    <p className="text-lg text-center mb-10">
-      Menjadi perusahaan penyedia solusi teknologi informasi dan sistem identifikasi
-      terpercaya di Indonesia yang memberikan nilai tambah bagi setiap pelanggan.
-    </p>
-  </div>
+Portfolio
 
-  <div>
-    <h3 className="text-3xl font-bold text-blue-700 mb-4 text-center">
-      Misi
-    </h3>
+</a>
 
-    <ul className="list-disc pl-6 space-y-3 text-lg">
-      <li>
-        Menyediakan produk dan solusi teknologi yang berkualitas serta sesuai
-        dengan kebutuhan pelanggan.
-      </li>
 
-      <li>
-        Memberikan pelayanan profesional dengan mengutamakan kepuasan pelanggan.
-      </li>
+<a 
+onClick={()=>setMenu(false)}
+href="#contact">
 
-      <li>
-        Membangun hubungan kerja sama jangka panjang yang dilandasi kepercayaan
-        dan integritas.
-      </li>
+Contact
 
-      <li>
-        Mendukung transformasi digital melalui inovasi teknologi yang efisien
-        dan berkelanjutan.
-      </li>
+</a>
 
-      <li>
-        Terus meningkatkan kompetensi sumber daya manusia dan kualitas layanan
-        agar mampu memberikan solusi terbaik bagi pelanggan.
-      </li>
-    </ul>
-  </div>
+
+</nav>
 
 </div>
-        </div>
-      </section>
 
-      {/* Services */}
-     <section
-  id="services"
-  className="py-24 bg-gray-100"
->
-  <div className="max-w-7xl mx-auto px-8">
-    <h2 className="text-4xl font-bold text-center mb-4">
-      Produk & Layanan
-    </h2>
+}
 
-    <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-      Kami menyediakan berbagai produk identifikasi pasien, perangkat barcode,
-      serta solusi pencetakan label yang mendukung operasional rumah sakit,
-      klinik, laboratorium, dan berbagai sektor industri.
-    </p>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-        <div className="text-5xl mb-5">🏥</div>
-        <h3 className="text-2xl font-bold mb-3">
-          Gelang Pasien
-        </h3>
-        <p className="text-gray-600 leading-7">
-          Menyediakan gelang identifikasi pasien dewasa, anak, dan bayi
-          dengan kualitas tinggi untuk mendukung keselamatan pasien di
-          rumah sakit dan fasilitas kesehatan.
-        </p>
-      </div>
+</header>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-        <div className="text-5xl mb-5">🖨️</div>
-        <h3 className="text-2xl font-bold mb-3">
-          Barcode Printer
-        </h3>
-        <p className="text-gray-600 leading-7">
-          Menyediakan berbagai printer barcode berkualitas tinggi
-          untuk kebutuhan pencetakan label, wristband, barcode,
-          dan kebutuhan industri lainnya.
-        </p>
-      </div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-        <div className="text-5xl mb-5">🏷️</div>
-        <h3 className="text-2xl font-bold mb-3">
-          Label & Ribbon
-        </h3>
-        <p className="text-gray-600 leading-7">
-          Menyediakan label barcode, label identifikasi, wristband label,
-          thermal ribbon, serta berbagai media cetak berkualitas tinggi
-          untuk kebutuhan bisnis Anda.
-        </p>
-      </div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-        <div className="text-5xl mb-5">🔧</div>
-        <h3 className="text-2xl font-bold mb-3">
-          Instalasi & Support
-        </h3>
-        <p className="text-gray-600 leading-7">
-          Layanan instalasi perangkat, konfigurasi sistem,
-          pelatihan pengguna, serta dukungan teknis untuk
-          memastikan solusi berjalan optimal.
-        </p>
-      </div>
 
-    </div>
-  </div>
+
+{/* HERO */}
+
+<section
+id="home"
+className="
+min-h-screen
+flex
+items-center
+justify-center
+bg-gradient-to-r
+from-blue-700
+to-cyan-500
+text-white
+px-5
+pt-24">
+
+
+<div className="
+max-w-5xl
+text-center">
+
+
+<h2 className="
+text-3xl
+sm:text-4xl
+md:text-6xl
+font-bold
+leading-tight
+mb-6">
+
+
+Solusi Identifikasi Pasien
+& Barcode Terpercaya
+
+
+</h2>
+
+
+
+<p className="
+text-base
+sm:text-lg
+md:text-xl
+leading-7
+md:leading-9
+mb-10">
+
+
+PT Trinovasi Digital Solusi menyediakan
+gelang pasien, kartu pasien, barcode printer,
+printer kartu, label barcode, thermal ribbon,
+dan perangkat AIDC untuk rumah sakit,
+klinik, laboratorium serta industri.
+
+
+</p>
+
+
+
+<div className="
+flex
+flex-col
+sm:flex-row
+justify-center
+gap-4">
+
+
+<a
+href="#contact"
+className="
+bg-white
+text-blue-700
+px-8
+py-4
+rounded-full
+font-bold">
+
+Hubungi Kami
+
+</a>
+
+
+
+<Link
+href="/produk"
+className="
+border-2
+border-white
+px-8
+py-4
+rounded-full
+font-bold">
+
+Lihat Produk
+
+</Link>
+
+
+</div>
+
+
+</div>
+
+
 </section>
-{/* Portfolio */}
-<section id="portfolio" className="py-24 bg-white">
-  <div className="max-w-7xl mx-auto px-8">
-
-    <h2 className="text-4xl font-bold text-center mb-4">
-      Partners
-    </h2>
-
-    <p className="text-center text-gray-600 mb-12">
-      PT Trinovasi Digital Solusi berkolaborasi dengan berbagai mitra
-      terpercaya untuk menghadirkan solusi terbaik bagi pelanggan.
-    </p>
-
-    <h3 className="text-3xl font-bold text-center text-blue-700 mb-12">
-      PT. FOKUS KREASI MEDIA
-    </h3>
-
-
-    <h2 className="text-4xl font-bold text-center mb-4">
-      Klien Kami
-    </h2>
-
-    <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-      Kami telah dipercaya oleh berbagai rumah sakit, klinik, dan perusahaan
-      dalam menyediakan solusi identifikasi pasien, barcode, serta perangkat
-      pendukung operasional.
-    </p>
-
-
-    <div className="grid md:grid-cols-3 gap-8">
-
-
-      {/* RSUD */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/RSUD.png"
-            alt="Logo RSUD"
-            width={180}
-            height={180}
-            unoptimized
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
-
-        <h3 className="text-2xl font-bold mb-3">
-          RSUD Sayang Cianjur
-        </h3>
-
-        <p className="text-gray-600">
-          Pengadaan gelang identifikasi pasien, barcode printer,
-          serta label rumah sakit.
-        </p>
-
-      </div>
 
 
 
-      {/* RS Pena */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/RS-PENA.png"
-            alt="Logo RS Pena"
-            width={180}
-            height={180}
-            unoptimized
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
-
-        <h3 className="text-2xl font-bold mb-3">
-          RS Pena 88
-        </h3>
-
-        <p className="text-gray-600">
-          Implementasi E-Tiket, printer label, serta solusi
-          pencetakan label identifikasi pasien.
-        </p>
-
-      </div>
 
 
+{/* ABOUT */}
 
-      {/* Nusantara */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+<section
+id="about"
+className="
+py-20
+px-5">
 
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/rs-nusantara.png"
-            alt="RS Nusantara"
-            width={180}
-            height={180}
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
 
-        <h3 className="text-2xl font-bold mb-3">
-          RS Nusantara Mustika Jaya
-        </h3>
+<div className="
+max-w-6xl
+mx-auto">
 
-        <p className="text-gray-600">
-          Implementasi E-Tiket, printer label, serta solusi
-          pencetakan identifikasi pasien.
-        </p>
 
-      </div>
+<h2 className="
+text-3xl
+md:text-4xl
+font-bold
+text-center
+mb-10">
+
+Tentang Kami
+
+</h2>
 
 
 
-      {/* Bhayangkara */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+<div className="
+text-center
+space-y-6
+text-gray-600
+leading-8
+text-base
+md:text-lg">
 
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/rs-bhayangkara-cianjur.png"
-            alt="RS Bhayangkara"
-            width={180}
-            height={180}
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
 
-        <h3 className="text-2xl font-bold mb-3">
-          RS Bhayangkara Cianjur
-        </h3>
+<p>
 
-        <p className="text-gray-600">
-          Implementasi gelang identifikasi pasien dan printer
-          wristband untuk pelayanan kesehatan.
-        </p>
+<b>
+PT Trinovasi Digital Solusi
+</b>
 
-      </div>
+merupakan perusahaan penyedia
+solusi teknologi informasi dan
+sistem identifikasi otomatis.
+
+</p>
 
 
 
-      {/* Sekarwangi */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+<p>
 
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/rs-sekarwangi.png"
-            alt="RSUD Sekarwangi"
-            width={180}
-            height={180}
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
+Kami menyediakan gelang pasien,
+barcode printer, barcode scanner,
+label barcode dan perangkat AIDC.
 
-        <h3 className="text-2xl font-bold mb-3">
-          RSUD Sekarwangi Sukabumi
-        </h3>
-
-        <p className="text-gray-600">
-          Implementasi kartu identitas pasien dan sistem
-          pencetakan kartu rumah sakit.
-        </p>
-
-      </div>
+</p>
 
 
 
-      {/* Muhammadiyah */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
+<p>
 
-        <div className="h-40 flex items-center justify-center mb-6">
-          <Image
-            src="/images/rs-muhammadiyah.png"
-            alt="RS Muhammadiyah"
-            width={180}
-            height={180}
-            className="max-h-36 w-auto object-contain"
-          />
-        </div>
+Kami membantu rumah sakit,
+klinik dan perusahaan melakukan
+transformasi digital.
 
-        <h3 className="text-2xl font-bold mb-3">
-          RS Muhammadiyah Taman Puring
-        </h3>
-
-        <p className="text-gray-600">
-          Implementasi gelang identifikasi pasien dan printer
-          wristband untuk mendukung pelayanan kesehatan.
-        </p>
-
-      </div>
+</p>
 
 
-    </div>
+</div>
 
-  </div>
+
+</div>
+
+
 </section>
-     
-   
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-6 text-center">
-        © 2026 PT.TRINOVASI DIGITAL SOLUSI. All Rights Reserved.
-      </footer>
 
-    </main>
-  );
+
+
+
+
+{/* SERVICES */}
+
+<section
+id="services"
+className="
+bg-gray-100
+py-20
+px-5">
+
+
+<div className="
+max-w-7xl
+mx-auto">
+
+
+<h2 className="
+text-3xl
+md:text-4xl
+font-bold
+text-center
+mb-12">
+
+Produk & Layanan
+
+</h2>
+
+
+
+<div className="
+grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-4
+gap-6">
+
+
+{
+products.map((item,index)=>(
+
+
+<div
+key={index}
+className="
+bg-white
+rounded-2xl
+shadow-lg
+p-6
+transition">
+
+
+<div className="
+text-5xl
+mb-5">
+
+{item.icon}
+
+</div>
+
+
+<h3 className="
+text-xl
+font-bold
+mb-3">
+
+{item.title}
+
+</h3>
+
+
+<p className="
+text-gray-600
+leading-7">
+
+{item.desc}
+
+</p>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+{/* PORTFOLIO */}
+
+<section
+id="portfolio"
+className="
+py-20
+px-5">
+
+
+<div className="
+max-w-7xl
+mx-auto">
+
+
+<h2 className="
+text-3xl
+md:text-4xl
+font-bold
+text-center
+mb-5">
+
+Klien Kami
+
+</h2>
+
+
+
+<p className="
+text-center
+text-gray-600
+mb-12">
+
+Dipercaya berbagai rumah sakit
+dalam solusi identifikasi pasien.
+
+</p>
+
+
+
+
+<div className="
+grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-3
+gap-8">
+
+
+{
+clients.map((client,index)=>(
+
+
+<div
+key={index}
+className="
+bg-white
+rounded-2xl
+shadow-lg
+p-6
+text-center">
+
+
+<div className="
+h-40
+flex
+justify-center
+items-center
+mb-5">
+
+
+<Image
+
+src={client.img}
+alt={client.name}
+width={180}
+height={180}
+className="
+object-contain
+max-h-36"
+
+/>
+
+
+</div>
+
+
+<h3 className="
+text-xl
+font-bold
+mb-3">
+
+{client.name}
+
+</h3>
+
+
+
+<p className="
+text-gray-600">
+
+{client.desc}
+
+</p>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+{/* CONTACT */}
+
+<section
+id="contact"
+className="
+bg-blue-700
+text-white
+py-16
+px-5
+text-center">
+
+
+<h2 className="
+text-3xl
+font-bold
+mb-5">
+
+Hubungi Kami
+
+</h2>
+
+
+<p>
+
+Siap membantu kebutuhan barcode
+dan identifikasi pasien perusahaan Anda.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<footer
+className="
+bg-black
+text-white
+text-center
+py-6
+text-sm">
+
+© 2026 PT.TRINOVASI DIGITAL SOLUSI
+
+</footer>
+
+
+</main>
+
+)
+
 }
